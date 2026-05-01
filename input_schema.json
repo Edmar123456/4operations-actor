@@ -1,0 +1,66 @@
+{
+    "title": "4Operations EURES Monitor",
+    "description": "Monitor automático de vagas EURES com extracção de emails e envio diário por email",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "maxPages": {
+            "title": "Páginas a percorrer",
+            "type": "integer",
+            "description": "Número de páginas do EURES a percorrer por run",
+            "default": 20,
+            "minimum": 1,
+            "maximum": 100
+        },
+        "resultsPerPage": {
+            "title": "Resultados por página",
+            "type": "integer",
+            "description": "Vagas por página",
+            "default": 50
+        },
+        "keywords": {
+            "title": "Palavras-chave",
+            "type": "array",
+            "description": "Filtrar vagas por palavras-chave (vazio = todas)",
+            "default": [],
+            "items": { "type": "string" }
+        },
+        "countries": {
+            "title": "Países",
+            "type": "array",
+            "description": "Filtrar por países (vazio = todos)",
+            "default": [],
+            "items": { "type": "string" }
+        },
+        "emailTo": {
+            "title": "Email destino",
+            "type": "string",
+            "description": "Email para receber os leads diários",
+            "default": "recrutamento@4operations.pt"
+        },
+        "smtpHost": {
+            "title": "SMTP Host",
+            "type": "string",
+            "description": "Servidor SMTP para envio de email (ex: smtp.gmail.com)",
+            "default": ""
+        },
+        "smtpPort": {
+            "title": "SMTP Port",
+            "type": "integer",
+            "default": 587
+        },
+        "smtpUser": {
+            "title": "SMTP Utilizador",
+            "type": "string",
+            "description": "Email de envio",
+            "default": ""
+        },
+        "smtpPass": {
+            "title": "SMTP Password",
+            "type": "string",
+            "description": "Password do email de envio",
+            "isSecret": true,
+            "default": ""
+        }
+    }
+}

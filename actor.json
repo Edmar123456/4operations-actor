@@ -1,0 +1,11 @@
+{
+    "actorSpecification": 1,
+    "name": "4operations-eures-monitor",
+    "title": "4Operations EURES Monitor",
+    "description": "Monitor automático de vagas EURES — extrai emails, elimina duplicados, envia relatório diário por email",
+    "version": "1.0",
+    "buildTag": "latest",
+    "environmentVariables": {},
+    "dockerfile": "./Dockerfile",
+    "input": "./.actor/input_schema.json"
+}
